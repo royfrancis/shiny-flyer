@@ -1,0 +1,6 @@
+---
+format:
+  nbis-flyer-typst:
+    keep-typ: false
+    font-paths: fonts
+---

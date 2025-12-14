@@ -1,0 +1,85 @@
+/* shiny-certificate custom styles */
+
+.card.bslib-card {
+  height: calc(100vh - (calc(var(--bs-gutter-x) * .5))*2);
+  margin: calc(var(--bs-gutter-x) * .5) 0;
+}
+
+.bslib-sidebar-layout>.sidebar>.sidebar-content {
+  padding: 1em;
+  padding-top: 2em;
+  gap: 6px;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.shiny-input-container .control-label {
+  margin-bottom: 0;
+}
+
+label.control-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-left: 0.3rem;
+}
+
+hr {
+  color: gray;
+  margin: 0.8rem 0;
+}
+
+#out_pdf {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.form-control {
+  font-size: 0.8rem;
+}
+
+#in_names,
+#in_content,
+#in_teacher,
+#in_footnotes {
+  white-space: pre;
+}
+
+.help-note {
+  font-size: 0.7rem;
+  color: #C0C0C0;
+  margin-top: 2px;
+}
+
+.app-card-header {
+  padding: 1em;
+  background-image: url("banners/specky.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+.app-footer {
+  background-color: #FFFFFF;
+  padding: 0.5em;
+}
+
+/* logo picker */
+.picker-outer {
+  width: 80px;
+}
+
+.picker-inner {
+ display: inline;
+ vertical-align: middle;
+ padding-left: 10px;
+}
+
+.bslib-mb-spacing {
+  margin-bottom: unset;
+}
