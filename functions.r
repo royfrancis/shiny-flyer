@@ -16,7 +16,7 @@ fn_dir <- function(session) {
 #' @return Function version string
 #' 
 fn_version <- function() {
-  return("v1.0.0")
+  return("v1.0.1")
 }
 
 #' General input validation
