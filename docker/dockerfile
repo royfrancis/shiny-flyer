@@ -16,9 +16,17 @@ RUN apt-get update \
     && Rscript -e 'remotes::install_github("rstudio/bslib");remotes::install_github("quarto-dev/quarto-r")' \
     && rm -rf /tmp/downloaded_packages
 
+RUN rm -rf /srv/shiny-server/*
 COPY . /srv/shiny-server/app
 COPY shiny-server.config /etc/shiny-server/shiny-server.conf
-RUN sudo chown -R shiny:shiny /srv/shiny-server/app
+
+# Ensure that the expected user is present in the container
+RUN if id shiny &>/dev/null && [ "$(id -u shiny)" -ne 999 ]; then \
+        userdel -r shiny; \
+        id -u 999 &>/dev/null && userdel -r "$(id -un 999)"; \
+    fi; \
+    useradd -u 999 -m -s /bin/bash shiny; \
+    chown -R shiny:shiny /srv/shiny-server/ /var/lib/shiny-server/ /var/log/shiny-server/
 
 EXPOSE 8787
 
