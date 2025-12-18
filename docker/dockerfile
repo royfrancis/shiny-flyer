@@ -17,8 +17,8 @@ RUN apt-get update \
     && rm -rf /tmp/downloaded_packages
 
 RUN rm -rf /srv/shiny-server/*
-COPY . /srv/shiny-server/app
-COPY shiny-server.config /etc/shiny-server/shiny-server.conf
+COPY . /srv/shiny-server/
+# COPY shiny-server.config /etc/shiny-server/shiny-server.conf
 
 # Ensure that the expected user is present in the container
 RUN if id shiny &>/dev/null && [ "$(id -u shiny)" -ne 999 ]; then \
