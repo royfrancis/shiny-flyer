@@ -15,10 +15,10 @@ Click [here](https://flyer.serve.scilifelab.se) to access an online instance of 
 ### Run in a docker container
 
 ```
-docker run --platform=linux/amd64 --rm -p 8787:8787 royfrancis/shiny-flyer:latest
+docker run --platform=linux/amd64 --rm -p 3838:3838 royfrancis/shiny-flyer:latest
 ```
 
-The app should be available through a web browser at `http://0.0.0.0:8787`.
+The app should be available through a web browser at `http://0.0.0.0:3838`.
 
 ### Run in R
 
